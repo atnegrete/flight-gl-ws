@@ -19,6 +19,9 @@ const gameServer = new Server({
 // Register StateHandlerRoom as "state_handler"
 gameServer.register("state_handler", StateHandlerRoom);
 
+app.use("/", express.static(path.join(__dirname, "static")));
+app.use("/", serveIndex(path.join(__dirname, "static"), { icons: true }));
+
 // (optional) attach web monitoring panel
 app.use("/colyseus", monitor(gameServer));
 
