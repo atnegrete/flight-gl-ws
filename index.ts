@@ -8,7 +8,7 @@ import { monitor } from "@colyseus/monitor";
 // Import demo room handlers
 import { StateHandlerRoom } from "./rooms/state_handler";
 
-const port = Number(process.env.PORT || 2567);
+const port = Number(process.env.PORT || 4000);
 const app = express();
 
 // Attach WebSocket Server on HTTP Server.
